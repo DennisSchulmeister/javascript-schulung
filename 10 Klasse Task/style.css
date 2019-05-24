@@ -1,0 +1,72 @@
+html {
+    font-family: sans-serif;
+    font-size: 16pt;
+
+    /* https://www.svgbackgrounds.com/#large-triangles */
+    background-color: #c0e4ee;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23a3c2ca' fill-opacity='0.1'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+html, body {
+    min-height: 100%;
+    height: 100%;
+}
+
+header {
+    background: rgba(0,0,0, 0.85);
+    color: white;
+    padding: 0.5em;
+}
+
+#input-taskdesc {
+    width: 30em;
+}
+
+#input-employee {
+    width: 20em;
+}
+
+#chart {
+    background: white;
+    padding: 1em;
+}
+
+#tasklist {
+    flex-grow: 1;
+    margin: 2em;
+
+    border: 1px solid lightgrey;
+    background: white;
+}
+
+#tasklist table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tasklist thead {
+    background: #f0f0f0;
+}
+
+#tasklist td,
+#tasklist th {
+    text-align: left;
+    padding: 0.5em;
+    font-weight: normal;
+}
+
+#tasklist tr {
+    border: 0px solid lightgrey;
+    border-bottom-width: 1px;
+}

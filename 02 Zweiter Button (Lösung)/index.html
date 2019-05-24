@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>JavaScript-Schulung</title>
+        <link rel="stylesheet" href="style.css" />
+
+        <style>
+            button {
+                margin-bottom: 1em;
+            }
+        </style>
+
+        <script>
+            n = 0;
+
+            function onPlusButtonClicked() {
+                n += 1;
+                let divMessage = document.getElementById("message");
+                divMessage.textContent = `Der Button wurde ${n} Mal gedrückt.`;
+            }
+
+            function onResetButtonClicked() {
+                n = -1;
+                onPlusButtonClicked();
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="onPlusButtonClicked()">Klick mich</button>
+        <button onclick="onResetButtonClicked()">Zurücksetzen</button>
+        <div id="message"></div>
+    </body>
+</html>
