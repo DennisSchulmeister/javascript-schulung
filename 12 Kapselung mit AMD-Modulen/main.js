@@ -72,6 +72,17 @@ define(["task"], function(Task) {
             let selectPrio = document.getElementById("select-prio");
 
             createButton.addEventListener("click", () => {
+                // Eingabeprüfung (Bonusaufgabe)
+                if (!inputTaskDesc.value.trim()) {
+                    alert("Geben Sie erst eine Aufgabenbeschreibung ein.");
+                    return;
+                }
+
+                if (!inputEmployee.value.trim()) {
+                    alert("Tragen Sie erst einen zuständigen Mitarbeiter ein.");
+                    return;
+                }
+
                 // Neuen Eintrag speichern
                 let task = new Task(inputTaskDesc.value, inputEmployee.value, selectPrio.value);
                 this.tasklist.push(task);
