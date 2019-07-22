@@ -29,14 +29,13 @@ function appendTaskToTable(task) {
 }
 
 function updateChart() {
+    chartdata.labels = [];
+    chartdata.series[0] = [];
+    indexForEmployees = {};
+
     tasklist.forEach(task => {
-        let index = -1;
-
         if (task.employee in indexForEmployees) {
-            index = indexForEmployees[task.employee];
-        }
-
-        if (index > -1) {
+            let index = indexForEmployees[task.employee];
             chartdata.series[0][index] += 1;
         } else {
             indexForEmployees[task.employee] = chartdata.labels.length;

@@ -36,14 +36,13 @@ class Main {
     }
 
     updateChart() {
+        this.chartdata.labels = [];
+        this.chartdata.series[0] = [];
+        this.indexForEmployees = {};
+
         this.tasklist.forEach(task => {
-            let index = -1;
-
             if (task.employee in this.indexForEmployees) {
-                index = this.indexForEmployees[task.employee];
-            }
-
-            if (index > -1) {
+                let index = this.indexForEmployees[task.employee];
                 this.chartdata.series[0][index] += 1;
             } else {
                 this.indexForEmployees[task.employee] = this.chartdata.labels.length;
